@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Charliometer
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .container
+      .row
+        .col-md-6.col-md-offset-3
+          = image_tag('charlimetre.jpg', class: 'img-responsive')
+          .text-right
+            i Avec l'aimable soutien de @PatWheel (non on lui a pas demandé)
+    = yield

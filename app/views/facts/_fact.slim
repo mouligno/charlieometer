@@ -1,0 +1,13 @@
+.panel.panel-default.panel-fact
+  .panel-content
+    p.fact-content = fact.content
+    .text-center
+      h3
+        => number_to_percentage(fact.score * 100, precision: 2)
+        'charlie
+  .panel-footer
+    .row
+      .col-xs-6
+        = button_to 'Charlie', fact_upvote_path(fact), class: 'btn btn-block btn-secondary'
+      .col-xs-6
+        = button_to 'Pas charlie', fact_downvote_path(fact), class: 'btn btn-block btn-primary'

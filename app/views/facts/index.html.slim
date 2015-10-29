@@ -1,0 +1,13 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3.col-xs-12.col-xs-offset-0
+      - @facts.all.each do |fact|
+        = render 'fact', fact: fact
+
+      hr.padded
+
+      h2 Add your fact
+      = simple_form_for @fact do |f|
+        = f.input :content
+        = f.submit class: 'btn btn-info btn-block'
+
